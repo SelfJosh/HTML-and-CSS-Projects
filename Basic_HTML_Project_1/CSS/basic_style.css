@@ -102,7 +102,7 @@ h1 {
         transform: scale(1.1) translateY(0px) ;
         background-image: url("../images/icons/icons2.png")
     }
-    10% {
-        transform: translateX(20px) ;
+    50% {
+        transform: translateY(300px) ;
     }
 }
