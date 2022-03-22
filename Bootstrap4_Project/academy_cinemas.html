@@ -50,7 +50,19 @@
             <div class="row">
               <div class="col-sm">
                 
-                <img class="img-fluid" src="./Img/img4.jpg" alt=""/>
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img class="d-block w-100" src="./Img/img4.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="./Img/img6.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="./Img/img7.jpg" alt="Third slide">
+                    </div>
+                  </div>
+                </div>
 
               </div>
               <div class="col-sm">
@@ -170,13 +182,67 @@
 
             <!--Showtimes-->
 
-            <div class="text-center my-5" id="Deals">
+            <!--Movie Deals-->
+            <div class="jumbotron jumbotron-fluid bg-info mt-5 text-center">
+              <div class="container">
+                <h1 class=" display-4 hidden-sm-down" style="color: #fff;font-family: roboto; font-weight: 900;text-transform: uppercase;">
+                Movie Deals
+                </h1>
+                <p class="lead">Check out our monthly movie deals!</p>
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#register">Sign up for our monthly deals here!</button>
+              </div>
+            </div>
+            <!--Movie Deals-->
+
+            <!-- Modal -->
+            <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Sign up to get movie deals!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">First Name</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Last Name</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last Name">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Form Modal-->
+
+            <div class="text-center" id="Deals">
                 <form>
                     <h1 class="text-primary my-lg-5">Sign-up for Movie Club Rewards</h1>
                     <div class="form-group">
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-info popover-dismiss" data-container="body" data-toggle="popover" data-placement="top" data-content="Submit eamil to be apart of our rewards club!">
+                      Sign Up!
+                    </button>
                 </form>
             </div> 
             
@@ -204,4 +270,12 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
+  <script>
+    $('.popover-dismiss').popover({
+  trigger: 'focus'
+  })
+  $('.carousel').carousel({
+    interval: 4000
+  })
+  </script>
 </html>
